@@ -9,9 +9,10 @@
 body {
   background-color: #fff0f5;
   color: #333;
-  # font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-family: 'Raleway', sans-serif;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: 'Montserrat';
   text-align: center;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
   padding-top: 50px;
 }
 
@@ -19,6 +20,7 @@ h1 {
   font-family: 'My Soul', cursive;
   color: #e91e63;
   font-size: 2.5em;
+  text-shadow: 0 0 0px rgba(0,0,0,0.5);
 }
 
 button {
@@ -45,6 +47,7 @@ button:hover {
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.4);
+  image-rendering: crisp-edges;
 }
 
 .modal-content {
@@ -63,14 +66,81 @@ button:hover {
   animation-timing-function: ease-out;
 }
 
+.modal-image {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-image-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 70vw;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+
+
+  animation-name: slideUp;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-out;
+}
+
 .close {
   color: #aaa;
   float: right;
   font-size: 28px;
 }
 
+.close-image {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  opacity: 0;
+}
+
 .close:hover {
   color: #e91e63;
+}
+
+.close-image:hover {
+  color: #e91e63;
+}
+
+.rectangle {
+  width: 700px;
+  height: 600px;
+  background-color: lightgray;
+  position: relative;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.overlay-text {
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 500px;
+  color: black;
+  font-size: 24px;
+  font-family: "Montserrat", cursive;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  pointer-events: none;
 }
 
 @keyframes slideUp {
@@ -84,6 +154,7 @@ button:hover {
   }
 }
 
+/* This is to change the appearance of the cursor to a heart */
 #heartCursor {
   position: fixed;
   width: 32px;
@@ -97,6 +168,7 @@ button:hover {
   will-change: transform;
 }
 
+/* This is for when the cursor hovers over an interactable */
 #heartCursor.fish {
   position: fixed;
   width: 32px;
@@ -110,9 +182,34 @@ button:hover {
   will-change: transform;
 }
 
+/*.container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+} */
+
+.shrink-on-hover {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+  transform: translate(-50%, -50%);
+}
+
+.shrink-on-hover:hover {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
 @keyframes beat {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.3); }
+}
+
+@keyframes shrink {
+  0% { transform: scale(1); }
+  100% { transform: scale(0.75); }
 }
 
 /* Hide native cursor */
