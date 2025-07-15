@@ -121,6 +121,7 @@ button:hover {
   height: 600px;
   background-color: lightgray;
   position: relative;
+  text-align: left;
 }
 
 .overlay-image {
