@@ -13,7 +13,20 @@ body {
   font-family: 'Montserrat';
   text-align: center;
   text-shadow: 0 0 10px rgba(0,0,0,0.5);
-  padding-top: 50px;
+  padding-top: 0%;
+  overflow-x: hidden;
+}
+
+.body2 {
+  background-color: #fff0f5;
+  color: #333;
+
+  font-family: 'Montserrat';
+  text-align: left;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  padding: 0%;
+  margin: 0;
+  width: 100vw;
 }
 
 h1 {
@@ -25,7 +38,7 @@ h1 {
 
 button {
   font-family: 'My Soul', cursive;
-  padding: 10px 20px;
+  padding: 1% 1%;
   background-color: #ff69b4;
   color: white;
   border: none;
@@ -36,6 +49,52 @@ button {
 button:hover {
   background-color: #e91e63;
 }
+
+img {
+  border-radius: 2vw;
+}
+
+/* Create a function to cycle through images */
+
+.fadein img {
+    position:absolute;
+    top:0;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 6s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+}
+
+@-webkit-keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+#f1 {
+    background-color: lightblue;
+}
+#f2 {
+    -webkit-animation-delay: -4s;
+    background-color: yellow;
+}
+#f3 {
+    -webkit-animation-delay: -2s;
+    background-color: lightgreen;
+}
+
+
 
 .modal {
   display: none;
@@ -53,14 +112,14 @@ button:hover {
 .modal-content {
   background-color: #fff;
   margin: 15% auto;
-  padding: 30px;
+  padding: 3%;
   border-radius: 15px;
   width: 80%;
   max-width: 400px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
 
-  /* NEW: Animation */
+  /* Animation */
   animation-name: slideUp;
   animation-duration: 0.4s;
   animation-timing-function: ease-out;
@@ -117,24 +176,46 @@ button:hover {
 }
 
 .rectangle {
-  width: 700px;
-  height: 600px;
+  width: 100vw;
+  height: 72vh;
   background-color: lightgray;
   position: relative;
   text-align: left;
+
+  margin-left: 0;
+  margin-right: auto;
+
+  padding: 0;
+  box-sizing: border-box;
+  display: block;
+}
+
+.rectangle_2 {
+  width: 100vw;
+  height: 72vh;
+  background-color: black;
+  position: relative;
+  text-align: right;
+
+  margin-left: 0;
+  margin-right: auto;
+
+  padding: 0;
+  box-sizing: border-box;
+  display: block;
 }
 
 .overlay-image {
   position: absolute;
   top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  transform: translateY(-50%);
 }
 
 .overlay-text {
   position: absolute;
-  top: 88%;
-  left: 50%;
+  top: 87%;
+  left: 280px;
   transform: translate(-50%,-50%);
   width: 500px;
   color: black;
@@ -142,6 +223,7 @@ button:hover {
   font-family: "Montserrat", cursive;
   text-shadow: 0 0 10px rgba(0,0,0,0.5);
   pointer-events: none;
+  text-align: left;
 }
 
 @keyframes slideUp {
@@ -183,20 +265,58 @@ button:hover {
   will-change: transform;
 }
 
-/*.container {
+#rcorners3 {
+  border-radius: 2vw;
+  background: url(https://i.ibb.co/F4PfyS2k/6-D9-D0038-CF00-43-A6-BCAE-0-FA8-D44-EF355.jpg);
+  background-position: left top;
+  background-repeat: repeat;
+  padding: 2vw;
+  width: 4vw;
+  height: 3vh;
+}
+
+.container {
+  width: 90vw;
+  margin: auto;
+  text-align: center;
+}
+
+/* Create a function to display things inline */
+.inline-block {
+  display: inline-block;
+  width: 45vw;
+  vertical-align: bottom;
+  box-sizing: border-box;
+}
+
+.row {
   position: relative;
-  width: 300px;
-  height: 200px;
-  overflow: hidden;
-} */
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  width: 100vw;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.right {
+  position: absolute;
+  right: 2vw;
+  margin: 0;
+  text-align: right;
+}
+
+.centered {
+  margin: 0 auto;
+}
 
 .shrink-on-hover {
   position: absolute;
   top: 45%;
-  left: 50%;
+  left: 20%;
   transform-origin: center;
   transition: transform 0.3s ease;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
 }
 
 .shrink-on-hover:hover {

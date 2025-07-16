@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Joey and Hailey's Love</title>
   <link rel="icon" type="image" href="https://i.ibb.co/LXXdPcx0/shark.png">
   <link rel="stylesheet" href="styles.css">
@@ -10,8 +11,22 @@
 
 </head>
 <body>
-  <h1>Joey and Hailey - Our Love</h1>
-  <p style="margin-bottom: 30px;">This is just the beginning of something magical for JoJo and Hailey Baby</p>
+  <div class="row">
+    
+      <h1 class="centered">Joey and Hailey - Our Love</h1>
+    
+    
+      <h2 class="right">Song of the Day</h2>
+    
+  </div>
+  <br>
+  <div class="inline-block">
+    <p style="margin-bottom: 30px;">This is just the beginning of something magical for JoJo and Hailey Baby</p>
+  </div>
+  <!--div class="inline-block">
+    <p style="margin-bottom: 30px;"> hallo there</p>
+  </div-->
+  <br>
 
   <button onclick="openModal()">Love Letter to Hailey</button>
   <button onclick="openModal2()">Love Letter to Joey</button>
@@ -39,31 +54,50 @@
 
 
   <br>
-  <p style="margin-top: 30px">
-  <!--style>
-    .rectangle {
-      height: 600px;
-      width: 600px;
-      background-color: #D3D3D3;
-      margin-left: 0;
-    }
-  </style-->
-  </p>
 
-  <!--p>I know that we miss each other a lot right now, but we just have to keep going strong.</p>
-  <p>So, I'm making this for any time that we feel like we need to have a connection deeper than words.</p-->
-  <div class="rectangle">
-    <img src="https://i.ibb.co/F4PfyS2k/6-D9-D0038-CF00-43-A6-BCAE-0-FA8-D44-EF355.jpg" class="overlay-image shrink-on-hover" id="hhBday">
-    <p class="overlay-text">Here was us early on in our relationship! It was someone's birthday party hehe</p>
-  </div>
+    <p style="margin-top: 30px">
+    <!--style>
+      .rectangle {
+        height: 600px;
+        width: 600px;
+        background-color: #D3D3D3;
+        margin-left: 0;
+      }
+    </style-->
+    </p>
 
-  <!--Modal for first image-->
-  <div id="modalimg1" class="modal" style="display:none">
-    <span class="close">&times;</span>
-    <img class="modal-image-content" id="modalImage">
-  </div>
 
+    <!-- FIRST RECTANGLE/IMAGE -->
+
+    <!--p>I know that we miss each other a lot right now, but we just have to keep going strong.</p>
+    <p>So, I'm making this for any time that we feel like we need to have a connection deeper than words.</p-->
+    <div class="rectangle">
+      <!--div class="fadein"-->
+        <img src="https://i.ibb.co/F4PfyS2k/6-D9-D0038-CF00-43-A6-BCAE-0-FA8-D44-EF355.jpg" class="overlay-image shrink-on-hover" id="hhBday">
+      <!--/div-->
+      <p class="overlay-text" style="font-size: 1em; text-align: left">Here was us early on in our relationship! It was someone's birthday party hehe</p>
+    </div>
+
+    <!--Modal for first image-->
+    <div id="modalimg1" class="modal" style="display:none">
+      <span class="close">&times;</span>
+      <img class="modal-image-content" id="modalImage">
+    </div>
+
+    <!-- SECOND RECTANGLE/IMAGE -->
+    <div class="rectangle_2">
+      <img src="" class="overlay-image shrink-on-hover" id="">
+      <p class="overlay-text" style="font-size: 1em; text-align: right"></p>
+    </div>
+
+    <!--Modal for second image-->
+    <div id="modalimg2" class="modal" style="display:none">
+      <span class="close">&times;</span>
+      <img class="modal-image-content" id="modalImage">
+    </div>
   
+
+    
 
   <div id="heartCursor"></div>
 
